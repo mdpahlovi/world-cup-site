@@ -6,18 +6,21 @@
 
     /* --Blog Boxes-- */
 .blog{
-    border: 1px solid var(--color-dark);
-    border-radius: 8px;
+    background-color: var(--color-light-gray);
+    border-radius: var(--b-radius);
+}
+.blog img{
+    border-radius: 10px 10px 0 0;
 }
 .blog-content{
-    margin: 0 8px 8px;
+    margin: 0 var(--sm-gap) var(--sm-gap);
 }
 .blog-content .blog-title, 
 .blog-content .s-btn{
-    margin-bottom: 8px;
+    margin-bottom: var(--sm-gap);
 }
 .s-btn{
-    padding: 0 8px;
+    padding: 0 var(--sm-gap);
 }
 .s-btn a{
     color: var(--color-dark);
@@ -26,4 +29,7 @@
     display: flex;
     justify-content: space-between;
     align-self: center;
+}
+.blog-content div h4{
+    color: rgba(22, 22, 22, 0.75);
 }

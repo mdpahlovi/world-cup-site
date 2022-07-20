@@ -1,10 +1,20 @@
 
     /* --Large Destops Screen--  */
-/* @media only screen and (max-width: 1400px){
-    div{
-        color: rgb(219, 114, 34);
+@media only screen and (min-width: 1400px){
+    :root{
+        --mar-padd: 5vw;
     }
-} */
+    .big-text{
+        font-size: 5rem;
+        line-height: 6rem;
+    }
+    .banner p{
+        font-size: 18px;
+        height: 108.8px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
 
     /* --Laptops and Destops Screen--  */
 @media only screen and (max-width: 1200px){
@@ -15,6 +25,11 @@
     .big-text{
         font-size: 3.5rem;
         line-height: 64px;
+    }
+    .banner p{
+        height: 96px;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 }
 
@@ -44,10 +59,7 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         padding: 0;
-        background-color: var(--color-light);
-    }
-    .main-sec .nav a{
-        border: 1px solid var(--color-dark);
+        background-color: var(--bg-color);
     }
     .btn-sec{
         display: block;

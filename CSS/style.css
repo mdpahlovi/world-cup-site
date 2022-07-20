@@ -4,12 +4,20 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+body{
+    background-color: var(--bg-color);
+}
 :root{
-    --color-dark:#161616;
-    --color-light:white;
-    --color-accent:#DD0000;
+    --bg-color: rgba(250, 243, 227, 0.35);
+    --color-dark: #000000;
+    --color-light: #f0f0f0;
+    --color-light-gray: rgba(250, 243, 227, 0.75);
+    --color-accent: #1A4D2E;
     --gap: 32px;
+    --sm-gap: 8px;
     --mar-padd: 4vw;
+    --b-radius: 8px;
+    --banner-b-radius: 32px;
 }
 li{
     list-style: none;
@@ -28,7 +36,7 @@ img{
 .btn {
     padding: 16px 24px;
     border: none;
-    border-radius: 8px;
+    border-radius: var(--b-radius);
     color: var(--color-light);
     background-color: var(--color-accent);
 }
@@ -48,7 +56,7 @@ img{
     gap: var(--gap);
     padding: 0 var(--mar-padd);
     background-color: var(--color-dark);
-    border-radius: 32px;
+    border-radius: var(--banner-b-radius);
 }
 .banner p{
     font-size: 1rem;
@@ -104,7 +112,7 @@ img{
 .nav{
     height: 296px;
     padding: var(--gap);
-    border-radius: 8px;
+    border-radius: var(--b-radius);
     display: flex;
     flex-direction: column;
     gap: var(--gap);
@@ -114,7 +122,7 @@ img{
     display: block;
     padding: 16px 0;
     text-align: center;
-    border-radius: 8px;
+    border-radius: var(--b-radius);
     background-color: var(--color-light);
 }
 .nav h4 a:active{
