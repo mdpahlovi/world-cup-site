@@ -1,0 +1,145 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;  
+}
+:root{
+    --color-dark:#161616;
+    --color-light:white;
+    --color-accent:#DD0000;
+    --gap: 32px;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    width: 100%;
+}
+.big-text{
+    font-size: 4rem;
+    line-height: 5rem;
+}
+.btn {
+    padding: 16px 24px;
+    border: none;
+    border-radius: 8px;
+    color: var(--color-light);
+    background-color: var(--color-accent);
+}
+.btn a{
+    font-weight: bold;
+    color: var(--color-light);
+}
+.section{
+    margin: 4vw;
+    margin-bottom: 0;
+}
+.container{
+    display: flex;
+    gap: var(--gap);
+}
+
+   /* --Banner Section-- */
+.banner{
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4vw;
+    background-color: var(--color-dark);
+    border-radius: 32px;
+}
+.banner p{
+    font-size: 1rem;
+}
+.banner > .content , .images{
+    width: 50%;
+}
+.banner .content{
+    animation: leftrevel 1s linear 1;
+}
+@keyframes leftrevel {
+    0%{
+        opacity: 0;
+        transform: translateX(-120%); 
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0); 
+    }
+}
+.banner .images{
+    animation: zoomout 1s linear 1;
+    animation-delay: 1s; 
+}
+@keyframes zoomout {
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(100%);  
+    }
+}
+.banner .content > h1 , p{
+    color: var(--color-light);
+    margin-bottom: var(--gap);
+}
+
+   /* --Section-- */
+.nav{
+    width: 296px;
+    height: 296px;
+    padding: var(--gap);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+    background-color: var(--color-dark);
+}
+.nav h4{
+    padding: 16px 0;
+    text-align: center;
+    border-radius: 8px;
+    background-color: var(--color-light);
+}
+.blogs{
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3,1fr);
+    gap: var(--gap);
+}
+.blog-content{
+    margin: 0 8px 8px;
+}
+.blog-content > h4 , .s-btn{
+    margin-bottom: 8px;
+}
+.blog-content div{
+    display: flex;
+    justify-content: space-between;
+}
+   /* --Button-- */
+.btn-sec{
+    width: auto;
+    display: flex;
+    justify-content: center;
+}
+.btn-sec .btn{
+    display: none;
+}
+   /* --Footer-- */
+footer{
+    margin-top: vvw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-dark);
+}
+footer ul{
+    display: flex;
+    gap:var(--gap);
+}
+footer ul .icon{
+    font-size: 2rem;
+}

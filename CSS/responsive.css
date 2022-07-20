@@ -1,0 +1,107 @@
+
+    /* --Large Destops Screen--  */
+@media only screen and (max-width: 1400px){
+    div{
+        /* color: rgb(219, 114, 34); */
+    }
+}
+
+    /* --Laptops and Destops Screen--  */
+@media only screen and (max-width: 1200px){
+    :root{
+        --gap: 28px;
+    }
+    .big-text{
+        font-size: 3.5rem;
+        line-height: 64px;
+    }
+    .section{
+        margin: 3vw;
+        margin-bottom: 0;
+    }
+    .banner{
+        padding: 0 3vw;
+    }
+}
+
+    /* --Tablets Screen-- */
+@media only screen and (max-width: 992px){
+    :root{
+        --gap: 20px;
+    }
+    .big-text{
+        font-size: 42px;
+        line-height: 48px;
+    }
+    .section{
+        margin: 32px;
+        margin-bottom: 0;
+    }
+    .banner{
+        padding: 0 32px;
+    }
+    .banner .content{
+        padding: 32px 0;
+    }
+    .banner p{
+        font-size: 14px;
+    }
+    .main-sec{
+        flex-direction: column;
+    }
+    .main-sec .nav{
+        width: auto;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .blogs{
+        grid-template: repeat(4, 1fr) / repeat(2,1fr);
+    }
+    .btn-sec{
+        margin-bottom: 32px;
+    }
+    .btn-sec .btn{
+        display: block;
+    }
+}
+
+    /* --Mini Tablets and Landscape phones-- */
+@media only screen and (max-width: 768px){
+    :root{
+        --gap: 12px;
+    }
+    .big-text{
+        font-size: 32px;
+        line-height: 32px;
+    }
+    .btn {
+        padding: 8px 24px;
+    }
+    .section{
+        margin: 32px;
+        margin-bottom: 0;
+    }
+    .banner{
+        padding: 0 24px;
+    }
+    .banner .content{
+        padding: 24px 0;
+    }
+    .banner p{
+        font-size: 11px;
+    }
+    .nav h4{
+        padding: 8px 0;
+    }
+    .btn-sec{
+        margin-bottom: 24px;
+    }
+}
+
+    /* Phones Screen */
+@media only screen and (max-width: 576px){
+    div{
+        /* color: rgb(11, 96, 14); */
+    }
+}
