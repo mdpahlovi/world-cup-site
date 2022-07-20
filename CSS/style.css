@@ -2,13 +2,14 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;  
+    font-family: 'Poppins', sans-serif;
 }
 :root{
     --color-dark:#161616;
     --color-light:white;
     --color-accent:#DD0000;
     --gap: 32px;
+    --mar-padd: 4vw;
 }
 li{
     list-style: none;
@@ -35,7 +36,7 @@ img{
     color: var(--color-light);
 }
 .section{
-    margin: 4vw;
+    margin: var(--mar-padd);
     margin-bottom: 0;
 }
 .container{
@@ -47,18 +48,27 @@ img{
 .banner{
     align-items: center;
     justify-content: space-between;
-    padding: 0 4vw;
+    padding: 0 var(--mar-padd);
     background-color: var(--color-dark);
     border-radius: 32px;
 }
 .banner p{
     font-size: 1rem;
 }
-.banner > .content , .images{
+.banner .content , 
+.banner img{
     width: 50%;
 }
-.banner .content{
-    animation: leftrevel 1s linear 1;
+.banner .content h1{
+    animation: leftrevel 1s ease-in-out 1;
+}
+.banner .content p{
+    animation: leftrevel 0.75s ease-in-out 1;
+    animation-delay: 0.25s;
+}
+.banner .content .btn{
+    animation: leftrevel 0.5s ease-in-out 1;
+    animation-delay: 0.5s;
 }
 @keyframes leftrevel {
     0%{
@@ -70,9 +80,8 @@ img{
         transform: translateX(0); 
     }
 }
-.banner .images{
-    animation: zoomout 1s linear 1;
-    animation-delay: 1s; 
+.banner img{
+    animation: zoomout 1s ease-in-out 1; 
 }
 @keyframes zoomout {
     0%{
@@ -82,7 +91,8 @@ img{
         transform: scale(100%);  
     }
 }
-.banner .content > h1 , p{
+.banner .content h1 , 
+.banner .content p{
     color: var(--color-light);
     margin-bottom: var(--gap);
 }
@@ -104,10 +114,17 @@ img{
     border-radius: 8px;
     background-color: var(--color-light);
 }
-.blogs{
+.nav h4:last-child{
+    color: var(--color-light);
+    background-color: var(--color-accent);
+}
+.blog-container{
     display: grid;
-    grid-template: repeat(3, 1fr) / repeat(3,1fr);
+    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
     gap: var(--gap);
+}
+.blog{
+    border: 1px solid var(--color-dark);
 }
 .blog-content{
     margin: 0 8px 8px;
@@ -130,16 +147,26 @@ img{
 }
    /* --Footer-- */
 footer{
-    margin-top: vvw;
+    padding: var(--mar-padd);
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: var(--color-dark);
 }
+footer h1,
+.footer-nav a,
+.social-icon .icon
+{
+    color: var(--color-light);
+}
+hr{
+    width: 85%;
+}
 footer ul{
     display: flex;
+    justify-content: center;
     gap:var(--gap);
 }
-footer ul .icon{
+.social-icon .icon{
     font-size: 2rem;
 }
