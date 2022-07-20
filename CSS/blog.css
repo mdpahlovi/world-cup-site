@@ -1,0 +1,29 @@
+   /* --Blog Button-- */
+   .nav h4:last-child a{
+    color: var(--color-light);
+    background-color: var(--color-accent);
+}
+
+    /* --Blog Boxes-- */
+.blog{
+    border: 1px solid var(--color-dark);
+    border-radius: 8px;
+}
+.blog-content{
+    margin: 0 8px 8px;
+}
+.blog-content .blog-title, 
+.blog-content .s-btn{
+    margin-bottom: 8px;
+}
+.s-btn{
+    padding: 0 8px;
+}
+.s-btn a{
+    color: var(--color-dark);
+}
+.blog-content div{
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+}

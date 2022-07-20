@@ -16,6 +16,7 @@ li{
 }
 a{
     text-decoration: none;
+    color: var(--color-dark);
 }
 img{
     width: 100%;
@@ -39,15 +40,12 @@ img{
     margin: var(--mar-padd);
     margin-bottom: 0;
 }
-.container{
-    display: flex;
-    gap: var(--gap);
-}
-
    /* --Banner Section-- */
 .banner{
+    display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: var(--gap);
     padding: 0 var(--mar-padd);
     background-color: var(--color-dark);
     border-radius: 32px;
@@ -97,9 +95,13 @@ img{
     margin-bottom: var(--gap);
 }
 
-   /* --Section-- */
+   /* --Main Section-- */
+.main-sec{
+    display: grid;
+    grid-template-columns: minmax(256px, 20vw) 1fr;
+    gap: var(--gap);
+}
 .nav{
-    width: 296px;
     height: 296px;
     padding: var(--gap);
     border-radius: 8px;
@@ -108,49 +110,36 @@ img{
     gap: var(--gap);
     background-color: var(--color-dark);
 }
-.nav h4{
+.nav h4 a{
+    display: block;
     padding: 16px 0;
     text-align: center;
     border-radius: 8px;
     background-color: var(--color-light);
 }
-.nav h4:last-child{
+.nav h4 a:active{
     color: var(--color-light);
     background-color: var(--color-accent);
 }
-.blog-container{
+.main-container{
     display: grid;
     grid-template: repeat(2, 1fr) / repeat(3, 1fr);
     gap: var(--gap);
 }
-.blog{
-    border: 1px solid var(--color-dark);
-}
-.blog-content{
-    margin: 0 8px 8px;
-}
-.blog-content > h4 , .s-btn{
-    margin-bottom: 8px;
-}
-.blog-content div{
-    display: flex;
-    justify-content: space-between;
-}
-   /* --Button-- */
+
+   /* --Button Section-- */
 .btn-sec{
-    width: auto;
-    display: flex;
-    justify-content: center;
-}
-.btn-sec .btn{
     display: none;
 }
    /* --Footer-- */
 footer{
+    margin-top: var(--mar-padd);
     padding: var(--mar-padd);
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: var(--gap);
     background-color: var(--color-dark);
 }
 footer h1,
