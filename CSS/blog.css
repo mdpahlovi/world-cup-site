@@ -13,14 +13,13 @@
     border-radius: 10px 10px 0 0;
 }
 .blog-content{
+    display: grid;
+    grid-template-rows: auto 24px 24px;
+    gap: var(--sm-gap);
     margin: 0 var(--sm-gap) var(--sm-gap);
 }
-.blog-content .blog-title, 
-.blog-content .s-btn{
-    margin-bottom: var(--sm-gap);
-}
 .s-btn{
-    padding: 0 var(--sm-gap);
+    width: 45%;
 }
 .s-btn a{
     color: var(--color-dark);
