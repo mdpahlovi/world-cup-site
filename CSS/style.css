@@ -13,12 +13,15 @@ body{
     --color-light: #f0f0f0;
     --color-light-gray: rgba(250, 243, 227, 0.75);
     --color-accent: #1A4D2E;
+    --color-accent-s:#FF9F29;
     --gap: 32px;
     --sm-gap: 8px;
     --mar-padd: 4vw;
     --b-radius: 8px;
     --banner-b-radius: 32px;
 }
+
+    /* --Initial Setup-- */
 li{
     list-style: none;
 }
@@ -37,8 +40,24 @@ img{
     padding: 16px 24px;
     border: none;
     border-radius: var(--b-radius);
-    color: var(--color-light);
     background-color: var(--color-accent);
+    position: relative;
+    z-index: 1;
+}
+.btn::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--color-accent-s);
+    border-radius: var(--b-radius);
+    z-index: -2;
+    transition: width 0.5s;
+}
+.btn:hover::after{
+    width: 100%;
 }
 .btn a{
     font-weight: bold;
